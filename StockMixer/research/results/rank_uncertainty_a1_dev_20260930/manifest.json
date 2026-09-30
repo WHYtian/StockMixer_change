@@ -1,0 +1,84 @@
+{
+  "status": "development_only_not_independent_oos",
+  "warning": "Base checkpoints were selected on the entire validation period. Test outputs were not opened.",
+  "run_dirs": [
+    "/vol/bitbucket/hw2025/stock/runs/nasdaq_e3_protocol_20260929/dropout0.1_seed20260813",
+    "/vol/bitbucket/hw2025/stock/runs/nasdaq_e3_protocol_20260929/dropout0.1_seed20260814",
+    "/vol/bitbucket/hw2025/stock/runs/nasdaq_e3_protocol_20260929/dropout0.1_seed20260815",
+    "/vol/bitbucket/hw2025/stock/runs/nasdaq_e3_protocol_20260929/dropout0.1_seed20260816",
+    "/vol/bitbucket/hw2025/stock/runs/nasdaq_e3_protocol_20260929/dropout0.1_seed20260817"
+  ],
+  "dataset": "/homes/hw2025/stock-uncertainty-project/StockMixer/dataset/NASDAQ",
+  "source_config": {
+    "dataset": "dataset/NASDAQ",
+    "output_dir": "/vol/bitbucket/hw2025/stock/runs/nasdaq_e3_protocol_20260929/dropout0.1_seed20260813",
+    "seed": 20260813,
+    "epochs": 300,
+    "patience": 30,
+    "dropout": 0.1,
+    "dropout_sites": "mixer",
+    "select_metric": "rank_ic",
+    "learning_rate": 0.001,
+    "alpha": 0.1,
+    "lookback": 16,
+    "horizon": 1,
+    "train_end": 756,
+    "valid_end": 1008,
+    "mc_samples": 50,
+    "select_smoothing": 5,
+    "min_epochs": 30,
+    "device": "cuda",
+    "limit_days": 0,
+    "device_used": "cuda"
+  },
+  "initial_days": 96,
+  "step_days": 52,
+  "ridge_penalty": 0.001,
+  "retention": 0.6,
+  "bootstrap_draws": 2000,
+  "block_days": 10,
+  "hashes": {
+    "/vol/bitbucket/hw2025/stock/runs/nasdaq_e3_protocol_20260929/dropout0.1_seed20260813/config.json": "ee8d5c4e0d6e86a56215bae37770d7d0a6b467f6908c3ebd79899ac0d2f99570",
+    "/vol/bitbucket/hw2025/stock/runs/nasdaq_e3_protocol_20260929/dropout0.1_seed20260813/valid_predictions.npz": "d66c21756f0316bad678184eb654d2318ffd3fb1b4767ce110e206d2a6a77ea0",
+    "/vol/bitbucket/hw2025/stock/runs/nasdaq_e3_protocol_20260929/dropout0.1_seed20260814/config.json": "ba5c454d61da11af0e4865c260765598f74bde53de9bd2bb27cf24ee509af933",
+    "/vol/bitbucket/hw2025/stock/runs/nasdaq_e3_protocol_20260929/dropout0.1_seed20260814/valid_predictions.npz": "09b37cd6810961bc75ee25efdca337a684670f4312390226a685481e7018f67e",
+    "/vol/bitbucket/hw2025/stock/runs/nasdaq_e3_protocol_20260929/dropout0.1_seed20260815/config.json": "1fe5d41b3936196f68ff6aaba9a7d8db7061f2cbd3733cbd26dbb2b072c78b87",
+    "/vol/bitbucket/hw2025/stock/runs/nasdaq_e3_protocol_20260929/dropout0.1_seed20260815/valid_predictions.npz": "93f40739100ad5182e2e6bc17a4f17d7144f76496257aec03707264424db7d5e",
+    "/vol/bitbucket/hw2025/stock/runs/nasdaq_e3_protocol_20260929/dropout0.1_seed20260816/config.json": "0e896639d1c09f0eb1027e3d59568eaf273a4f02fd2e862fca1e2eb7ed144a0a",
+    "/vol/bitbucket/hw2025/stock/runs/nasdaq_e3_protocol_20260929/dropout0.1_seed20260816/valid_predictions.npz": "4ab3fd238a519cf089142565dbcbd6f7378a67e05db1cafc5cf7f5670eae260f",
+    "/vol/bitbucket/hw2025/stock/runs/nasdaq_e3_protocol_20260929/dropout0.1_seed20260817/config.json": "2f6d7673eaf8b2976756507ca2529b2fbdef29a0aecfeec5976552e630c83573",
+    "/vol/bitbucket/hw2025/stock/runs/nasdaq_e3_protocol_20260929/dropout0.1_seed20260817/valid_predictions.npz": "9dede6049741b8004b832a308d46e9c26b0a119c27471a7a30392ba88733774a",
+    "/homes/hw2025/stock-uncertainty-project/StockMixer/dataset/NASDAQ/eod_data.pkl": "598e1a23e4f71c22c655870ad7cd3b8cfea132233e280b23619108f4f1d91531",
+    "/homes/hw2025/stock-uncertainty-project/StockMixer/dataset/NASDAQ/gt_data.pkl": "5c61bb1601289ff2ff7f8e9366945746b1ea5f5e8f98d19104736db71b0a29b0",
+    "/homes/hw2025/stock-uncertainty-project/StockMixer/dataset/NASDAQ/mask_data.pkl": "5ff77e297720e265684bcd73961089d9dd34c0a42bb0f0b73fd33417e4ca37ee",
+    "/homes/hw2025/stock-uncertainty-project/StockMixer/dataset/NASDAQ/price_data.pkl": "8797d6afc626d4eb22690db38d1d19014401ce512bf5e80738c802d524dbda4a",
+    "/homes/hw2025/stock-uncertainty-project/StockMixer/research/rank_uncertainty.py": "4496e281fada1e4d20591972499584c647fbdeaecd6f166b893f92bbd343c45b",
+    "/homes/hw2025/stock-uncertainty-project/plan/protocol_rank_uncertainty_a1_20260930.md": "c10b1c44e48d9a863714999b339634230b0a216e04ad13bb469066290116e7b9"
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "fit_first": 0,
+      "fit_last": 95,
+      "eval_first": 96,
+      "eval_last": 147
+    },
+    {
+      "fold": 1,
+      "fit_first": 0,
+      "fit_last": 147,
+      "eval_first": 148,
+      "eval_last": 199
+    },
+    {
+      "fold": 2,
+      "fit_first": 0,
+      "fit_last": 199,
+      "eval_first": 200,
+      "eval_last": 251
+    }
+  ],
+  "stock_days": 256451,
+  "evaluated_stock_days": 158497,
+  "rank_disagreement_source": "five-seed deterministic point ranks, NOT MC draws"
+}

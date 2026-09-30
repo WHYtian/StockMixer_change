@@ -1,0 +1,7 @@
+# Observed working environment: Python 3.12.
+# Install an appropriate CPU/CUDA build of PyTorch for your machine.
+numpy==2.4.4
+scipy==1.18.0
+pandas==3.0.3
+torch==2.11.0
+pytest==9.1.1

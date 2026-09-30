@@ -1,0 +1,16 @@
+{
+  "run_dirs": [
+    "/vol/bitbucket/hw2025/stock/runs/nasdaq_e3_protocol_20260929"
+  ],
+  "output_dir": "/vol/bitbucket/hw2025/stock/runs/nasdaq_e3_protocol_20260929/summary",
+  "top_k": 50,
+  "cost_bps": [
+    0.0,
+    10.0,
+    20.0
+  ],
+  "tuning_cost_bps": 10.0,
+  "bootstrap": 2000,
+  "block_days": 10,
+  "seed": 0
+}

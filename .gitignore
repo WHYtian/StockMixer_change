@@ -1,0 +1,34 @@
+# Credentials and local configuration
+.env
+.env.*
+*.pem
+*.key
+.git-token
+*credentials*.json
+
+# Data, model artifacts, and per-stock predictions
+dataset/
+datasets/
+*.pkl
+*.pickle
+*.npy
+*.npz
+*.pt
+*.pth
+*.ckpt
+
+# Environments, caches, editors, and logs
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.idea/
+.vscode/
+.claude/
+.DS_Store
+*.log
+*.out
+*.err
