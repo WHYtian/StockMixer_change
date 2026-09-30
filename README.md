@@ -4,6 +4,11 @@
 
 ## 当前结果（2026-09-30）
 
+A2 已启动：两个时间窗口、五种子共十次训练，将基础训练、checkpoint 选择、
+风险拟合和评价分离；增加容量匹配的打乱特征对照及多重检验校正。
+目前没有 A2 效果结论。见 [A2 固定协议](plan/protocol_rank_uncertainty_a2_20260930.md)
+和 [DEUP 源码审计](plan/deup_code_audit_20260930.md)。下文为已完成的 A1 结果。
+
 最新 A1 实验使用 NASDAQ 的 5 个随机种子，在开发期进行顺序交叉拟合，评估 156 个交易日、158,497 个有效股票日。
 
 - **主要指标未通过正向验证**：加入四种不确定性特征配置后，排名错误预测 MSE 相对控制变量对照的配对 95% 区间均包含零。
@@ -15,7 +20,7 @@
 ## 仓库内容
 
 - `StockMixer/research/`：训练、MC Dropout、概率评估、因子控制、回测诊断、A 股数据预处理及排名风险分析。
-- `StockMixer/tests/`：43 项测试，覆盖模型模式切换、数据边界、指标、筛选及排名风险评估。
+- `StockMixer/tests/`：54 项测试，覆盖模型模式切换、数据边界、指标、筛选、排名风险及 A2 时间隔离与对照检验。
 - `StockMixer/research/results/`：A1 汇总、逐日指标、输入指纹，以及此前 NASDAQ E3 的基础汇总。
 - `plan/`：文献与开源项目调研、研究计划、NASDAQ / A 股报告、A1 协议及结果。
 
@@ -65,7 +70,24 @@ A1 分析只读取验证期预测；输出目录必须不存在。训练脚本�
 
 ## 尚未解决的问题
 
-尚未完成外层时间验证；标准化标签与原始收益的概率指标单位、MSE 与 beta-NLL 的损失权重可比性、MC 偶然不确定性的聚合方式，以及简化回测的成交/权重假设，仍需要进一步审计。详见研究计划。当前结果不应写成“显著提升样本外预测准确率”或实盘表现。
+外层时间验证 A2 正在运行，尚无结果；标准化标签与原始收益的概率指标单位、MSE 与 beta-NLL 的损失权重可比性、MC 偶然不确定性的聚合方式，以及简化回测的成交/权重假设，仍需要进一步审计。详见研究计划。当前结果不应写成“显著提升样本外预测准确率”或实盘表现。
+
+A2 训练入口（在 `StockMixer/` 内，五个种子分别运行，输出路径不得已存在对应运行）：
+
+```bash
+python -m research.rank_a2 train --seed 20260813 \
+  --root /path/to/a2-runs --dataset /path/to/NASDAQ \
+  --protocol ../plan/protocol_rank_uncertainty_a2_20260930.md
+```
+
+全部十次训练完成后统一分析：
+
+```bash
+python -m research.rank_a2 analyse \
+  --root /path/to/a2-runs --dataset /path/to/NASDAQ \
+  --protocol ../plan/protocol_rank_uncertainty_a2_20260930.md \
+  --output /path/to/new-a2-analysis
+```
 
 ## 来源
 
