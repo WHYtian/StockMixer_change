@@ -26,6 +26,8 @@ A2 已启动：两个时间窗口、五种子共十次训练，将基础训练�
 
 这是研究代码与轻量结果的整理版，不是本地目录的完整备份。原始数据、逐股票预测、模型权重、旧探索性 notebook、机器专用调度脚本和运行日志没有上传。历史文档及 manifest 保留原始运行路径，以便追溯；在其他机器复现时须替换路径。报告引用的部分额外回测产物未包含在此快照中。
 
+A2 的轻量结果保存在 `StockMixer/research/results/rank_uncertainty_a2_20260930/`；完整逐日表未上传，报告和汇总 JSON 已保留。
+
 ## 安装与测试
 
 已测试环境为 Python 3.12；依赖版本记录在 [requirements.txt](requirements.txt)。按机器的 CPU/CUDA 环境安装合适的 PyTorch。
