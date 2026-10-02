@@ -1,0 +1,60 @@
+{
+  "market": "A-share CSI300+CSI500",
+  "run_root": "/vol/bitbucket/hw2025/stock/runs/ashare_a2_protocol_20260929",
+  "dataset": "/vol/bitbucket/hw2025/stock/data/ashare_pit_csi800_20150101_20260928",
+  "validation_end": 2431,
+  "hashes": {
+    "/vol/bitbucket/hw2025/stock/runs/ashare_a2_protocol_20260929/dropout0.1_seed20260813/test_predictions.npz": "395178c177102fb9227806f4026727b189fb68fb47c430274811e965c08ded1c",
+    "/vol/bitbucket/hw2025/stock/runs/ashare_a2_protocol_20260929/dropout0.1_seed20260813/config.json": "9e3eb2cbf091cc218adab13fee61b9111742e899a110b1be0b0c1c2e3fb9d281",
+    "/vol/bitbucket/hw2025/stock/runs/ashare_a2_protocol_20260929/dropout0.1_seed20260814/test_predictions.npz": "ad0e1e5b919c80a274ae7db7a4ff16fbac7b445a6856907e03b95d928871f846",
+    "/vol/bitbucket/hw2025/stock/runs/ashare_a2_protocol_20260929/dropout0.1_seed20260814/config.json": "24246428050e48e679e2e5a3863b774d56440121de9d8520736a9fa4bb18b179",
+    "/vol/bitbucket/hw2025/stock/runs/ashare_a2_protocol_20260929/dropout0.1_seed20260815/test_predictions.npz": "2337780b39dda6f7d4cd22996032fe5b58d7d3a7c1acd6478575a55d03552f22",
+    "/vol/bitbucket/hw2025/stock/runs/ashare_a2_protocol_20260929/dropout0.1_seed20260815/config.json": "e3247210a0bf4c5fc9cb6083d16a0b364066301946bf257fe860d5bb38232c10",
+    "/vol/bitbucket/hw2025/stock/runs/ashare_a2_protocol_20260929/dropout0.1_seed20260816/test_predictions.npz": "e8d7951fc5f8434899afe78405fc4a2bfc10029344e75765d1bde774d26838e2",
+    "/vol/bitbucket/hw2025/stock/runs/ashare_a2_protocol_20260929/dropout0.1_seed20260816/config.json": "d98c64a89c127be1e6422bd7ca9e5cf574dada0cc021833e526e639028992b54",
+    "/vol/bitbucket/hw2025/stock/runs/ashare_a2_protocol_20260929/dropout0.1_seed20260817/test_predictions.npz": "8a0334b037ab9530875cecacef06bfe1d7c18e07bba4d1e4e95495bec5e23b34",
+    "/vol/bitbucket/hw2025/stock/runs/ashare_a2_protocol_20260929/dropout0.1_seed20260817/config.json": "b7181dd96c44bec6a05f85351fa7e3e75456d5408c2d6adf77b988e6cf6b7640",
+    "/vol/bitbucket/hw2025/stock/data/ashare_pit_csi800_20150101_20260928/panel.npz": "24728f8c35e2a6a49f17a16cd2d55bdd4c64ab6d14ddbfaa328f6d847ad9632e"
+  },
+  "protocol_sha256": "c0b32acfb0b7e08f9037f39988f7090a17c78d2c4c1fa5c7baaf4e6839152978",
+  "folds": [
+    {
+      "fold": 0,
+      "fit_first": 0,
+      "fit_last": 125,
+      "eval_first": 126,
+      "eval_last": 188
+    },
+    {
+      "fold": 1,
+      "fit_first": 0,
+      "fit_last": 188,
+      "eval_first": 189,
+      "eval_last": 251
+    },
+    {
+      "fold": 2,
+      "fit_first": 0,
+      "fit_last": 251,
+      "eval_first": 252,
+      "eval_last": 314
+    },
+    {
+      "fold": 3,
+      "fit_first": 0,
+      "fit_last": 314,
+      "eval_first": 315,
+      "eval_last": 377
+    },
+    {
+      "fold": 4,
+      "fit_first": 0,
+      "fit_last": 377,
+      "eval_first": 378,
+      "eval_last": 421
+    }
+  ],
+  "bootstrap_draws": 10000,
+  "block_days": 10,
+  "status": "retrospective_external_holdout_not_untouched_data"
+}

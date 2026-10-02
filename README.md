@@ -10,6 +10,9 @@ A2 已完成：两个时间窗口、五种子共十次训练，将基础训练�
 [A2 结果](plan/results_rank_uncertainty_a2_20260930.md)、[A2 固定协议](plan/protocol_rank_uncertainty_a2_20260930.md)
 和 [DEUP 源码审计](plan/deup_code_audit_20260930.md)。
 
+A 股外部市场审计已完成：NASDAQ 上的排名分歧主要效果未在 A 股测试期复现，当前结论
+更新为市场/时期依赖，详见 [A 股审计报告](plan/results_rank_external_ashare_20261002.md)。
+
 最新 A1 实验使用 NASDAQ 的 5 个随机种子，在开发期进行顺序交叉拟合，评估 156 个交易日、158,497 个有效股票日。
 
 - **主要指标未通过正向验证**：加入四种不确定性特征配置后，排名错误预测 MSE 相对控制变量对照的配对 95% 区间均包含零。
