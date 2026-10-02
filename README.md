@@ -4,10 +4,11 @@
 
 ## 当前结果（2026-09-30）
 
-A2 已启动：两个时间窗口、五种子共十次训练，将基础训练、checkpoint 选择、
-风险拟合和评价分离；增加容量匹配的打乱特征对照及多重检验校正。
-目前没有 A2 效果结论。见 [A2 固定协议](plan/protocol_rank_uncertainty_a2_20260930.md)
-和 [DEUP 源码审计](plan/deup_code_audit_20260930.md)。下文为已完成的 A1 结果。
+A2 已完成：两个时间窗口、五种子共十次训练，将基础训练、checkpoint 选择、
+风险拟合和评价分离；增加容量匹配的打乱特征对照及多重检验校正。跨种子排名分歧
+通过了预先指定的排名错误 MSE 审计，但没有证明收益 RankIC 提升。见
+[A2 结果](plan/results_rank_uncertainty_a2_20260930.md)、[A2 固定协议](plan/protocol_rank_uncertainty_a2_20260930.md)
+和 [DEUP 源码审计](plan/deup_code_audit_20260930.md)。
 
 最新 A1 实验使用 NASDAQ 的 5 个随机种子，在开发期进行顺序交叉拟合，评估 156 个交易日、158,497 个有效股票日。
 
